@@ -6,7 +6,7 @@ import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
 
-export const DiayrStateContext = React.createContext();
+export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 const mockData = [
   {
@@ -98,7 +98,7 @@ function App() {
     return <div>데이터를 불러오는 중입니다.</div>;
   } else {
     return (
-      <DiayrStateContext.Provider value={data}>
+      <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider
           value={{
             onCreate,
@@ -115,7 +115,7 @@ function App() {
             </Routes>
           </div>
         </DiaryDispatchContext.Provider>
-      </DiayrStateContext.Provider>
+      </DiaryStateContext.Provider>
     );
   }
 }
