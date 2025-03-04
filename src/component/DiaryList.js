@@ -11,7 +11,7 @@ const sortOptionList = [
 
 const DiaryList = ({ data }) => {
     const [sortType, setSortType] = useState("latest");
-    const [sortedData, setSortedData] = useState();
+    const [sortedData, setSortedData] = useState([]);
 
     const onChangeSortType = (e) => {
         setSortType(e.target.value);
