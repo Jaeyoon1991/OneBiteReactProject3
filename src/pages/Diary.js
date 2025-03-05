@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import useDiary from "../hooks/useDiary";
 import Button from "../component/Button";
 import Header from "../component/Header";
+import Viewer from "../component/Viewer";
 import { getFormattedDate } from "../util";
 
 const Diary = () => {
@@ -29,8 +30,7 @@ const Diary = () => {
                     leftChild={<Button text={"< 뒤로가기"} onClick={goBack} />}
                     rightChild={<Button text={"수정하기"} onClick={goEdit} />}
                 />
-                <div>{id}번 일기</div>
-                <div>Diary 페이지 입니다.</div>
+                <Viewer content={content} emotionId={emotionId} />
             </div>
         );
     }
