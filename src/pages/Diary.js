@@ -1,14 +1,19 @@
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
+import useDiary from "../hooks/useDiary";
 
 const Diary = () => {
-    // url경로에 포함된 파라미터를 객체로 변환
     const { id } = useParams();
-    return (
-        <div>
-            <div>{id}번 일기</div>
-            <div>Diary 페이지 입니다.</div>
-        </div>
-    
-    )
+    const data = useDiary(id);
+
+    if (!data) {
+        return <div>일기를 불러오고 있습니다...</div>;
+    } else {
+        return (
+            <div>
+                <div>{id}번 일기</div>
+                <div>Diary 페이지 입니다.</div>
+            </div>
+        );
+    }
 };
 export default Diary;
