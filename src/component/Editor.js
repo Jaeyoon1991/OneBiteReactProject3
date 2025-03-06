@@ -82,7 +82,7 @@ const Editor =({ initData, onSubmit }) => {
             <div className="editor_section">
                 {/* 작성 완료, 취소 */}
             </div>
-            <div className="editor_section buttom_section">
+            <div className="editor_section bottom_section">
                 <Button text={"취소하기"} onClick={handleOnGoBack}/>
                 <Button text={"작성 완료"} type={"positive"} onClick={handleSubmit} />
             </div>
